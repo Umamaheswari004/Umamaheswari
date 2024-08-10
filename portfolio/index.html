@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Personal Portfolio Website </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo1.jpg" class="logo">
+                    <ul>
+                        <li><a href="#"> Home </a></li>
+                        <li><a href="#"> About</a></li>
+                        <li><a href="#"> Services</a></li>
+                        <li><a href="#"> Portfolio <a></li>
+                        <li><a href="#"> Contact </a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>B.Tech computer Science and Buisness System       STUDENT </p>
+                    <h1>Hi, I'm <span>Umamaheswari</span><br> From Coimbatore</h1>
+                </div>
+            </div>
+
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title"> About Me</h1>
+                        <p>
+                            I am a dedicated and passionate B.Tech student in Computer Science and Business Systems at Dr. NGP Institute of Technology. Specialization in blockchain technology, and I am driven by a strong desire to become a proficient full stack developer.
+                         </p>
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app development</li>
+                                <li><span>App Development</span><br>Building android apps</li>
+                                <li><span>Cloud Computing </span><br>Microsoft azure fundamentals </li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul> 
+                                <li><span>Internship:</span><br>Full stack developing using django framework </li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2024-Current</span><br>III year B.Tech Computer Science and Buisness Systems</li>
+                                <li><span>2020 - 2022</span><br>Higher Secondary- St Mary's Girls Higher Secondary School</li>
+                                <li><span>2019 - 2020</span><br>High School- V.S.S.M High School</li>
+                            </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Web Design</h2>
+                        <p>Web design involves creating the visual and interactive aspects of websites. It encompasses several disciplines, including graphic design, user interface (UI) design, user experience (UX) design, and search engine optimization (SEO).</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>App Design</h2>
+                        <p>Web design involves creating the visual and interactive aspects of websites. It encompasses several disciplines, including graphic design, user interface (UI) design, user experience (UX) design, and search engine optimization (SEO).</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>Cloud Computing</h2>
+                        <p>Web design involves creating the visual and interactive aspects of websites. It encompasses several disciplines, including graphic design, user interface (UI) design, user experience (UX) design, and search engine optimization (SEO).</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks= document.getElementsByClassName("table-links");
+            var tabcontents= document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+        
+    </body>
+</html>
